@@ -1,0 +1,16 @@
+type Order {
+	id: ID!,
+	type: String,
+	modelCode: String,
+	brandName: String,
+	launchDate: String
+}
+
+type Query {
+	orders(count: Int):[Order]
+	order(id: ID):Order
+}
+
+type Mutation {
+	createOrder(type: String!, modelCode: String!, brandName: String, launchDate: String):Order
+}
